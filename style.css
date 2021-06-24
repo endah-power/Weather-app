@@ -1,0 +1,133 @@
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 100%;
+}
+
+h1 {
+    font-weight: 600;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 35px;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    color: #fffdfb;
+    padding: 7px 10px;
+    border: none;
+    border-radius: 30px;
+    background-color: #1f6cb0;
+}
+
+li {
+    color: #1f6cb0;
+    font-size: 17px;
+    line-height: 40px;
+    list-style: none;
+    text-align: justify;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+footer {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.change-city {
+    text-align: center;
+}
+
+.unit {
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+}
+
+.line {
+    font-size: 25px;
+    font-weight: 200;
+}
+
+.frame {
+    font-family: "Lekton", sans-serif;
+    margin: 50px auto;
+    padding: 40px 50px 30px;
+    max-width: 650px;
+    background: #ffffff99;
+    border-radius: 20px;
+}
+
+.col {
+    text-align: center;
+    background: #ffffff99;
+    border-radius: 30px;
+    margin: 5px;
+    transition: all 200ms ease;
+}
+
+.col:hover {
+    cursor: pointer;
+    background: #f3dfe3;
+}
+
+.day {
+    color: #1f6cb0;
+    font-weight: 900;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.weather-icon {
+    width: 40px;
+    margin-bottom: 10px;
+}
+
+.weather-icon:hover {
+    width: 50px;
+}
+
+.current-icon {
+    width: 150px;
+}
+
+.current-temp {
+    font-weight: 500;
+}
+
+.city-name {
+    border: none;
+    border-radius: 30px;
+    padding: 7px 10px;
+}
+
+.search-button {
+    color: #fffdfb;
+    padding: 7px 10px;
+    border: none;
+    border-radius: 30px;
+    background-color: #1f6cb0;
+}
+
+.current-weather {
+    font-size: 18px;
+}
+
+.characteristics {
+    background: #ffffff99;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.temperature {
+    font-size: 14px;
+}
+
+.email {
+    color: #b7569a;
+    text-decoration: none;
+}
