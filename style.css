@@ -23,6 +23,10 @@ button {
     background-color: #1f6cb0;
 }
 
+button:hover {
+    background-color: #4f81c7;
+}
+
 li {
     color: #1f6cb0;
     font-size: 17px;
@@ -112,6 +116,10 @@ footer {
     border: none;
     border-radius: 30px;
     background-color: #1f6cb0;
+}
+
+.search-button:hover {
+    background-color: #4f81c7;
 }
 
 .current-weather {
