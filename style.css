@@ -6,11 +6,7 @@ body {
 
 h1 {
     font-weight: 600;
-}
-
-h2 {
-    font-weight: 600;
-    font-size: 35px;
+    font-size: 40px;
 }
 
 button {
@@ -30,7 +26,7 @@ button:hover {
 li {
     color: #1f6cb0;
     font-size: 17px;
-    line-height: 40px;
+    line-height: 30px;
     list-style: none;
     text-align: justify;
     margin-top: 5px;
@@ -61,8 +57,8 @@ footer {
 .frame {
     font-family: "Lekton", sans-serif;
     margin: 50px auto;
-    padding: 40px 50px 30px;
-    max-width: 650px;
+    padding: 20px 30px 10px;
+    max-width: 550px;
     background: #ffffff99;
     border-radius: 20px;
 }
@@ -101,7 +97,8 @@ footer {
 }
 
 .current-temp {
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 30px;
 }
 
 .city-name {
