@@ -57,7 +57,7 @@ function displayCurrentWeather(response) {
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#cloudiness").innerHTML = response.data.clouds.all;
   document.querySelector(".current-weather").innerHTML =
-    response.data.weather[0].main;
+    response.data.weather[0].description;
   document.querySelector(".high").innerHTML = Math.round(
     response.data.main.temp_max
   );
@@ -83,10 +83,18 @@ function handleSubmit(event) {
   searchCity(city);
 }
 
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  alert("Link clicked");
+}
+
 searchCity("denpasar");
 
 let searchForm = document.querySelector(".change-city");
 searchForm.addEventListener("submit", handleSubmit);
+
+let fahrenheitConvert = document.querySelector("#fahrenheit-convert");
+fahrenheitConvert.addEventListener("click", displayFahrenheitTemperature);
 
 //Geolocation//
 function showCurrentWeather(response) {
