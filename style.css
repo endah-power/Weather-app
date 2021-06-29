@@ -46,13 +46,20 @@ footer {
 .unit {
     text-decoration: none;
     font-size: 20px;
-    color: black;
+    color: #1f6cb0;
+}
+
+.unit:hover {
+    cursor: pointer;
+    font-size: 25px;
+    color: #f76b8a;
 }
 
 .line {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 200;
 }
+
 
 .frame {
     font-family: "Lekton", sans-serif;
