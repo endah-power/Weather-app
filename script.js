@@ -87,8 +87,8 @@ function handleSubmit(event) {
 
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   let temperatureElement = document.querySelector(".current-temp");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
@@ -122,7 +122,7 @@ function showCurrentWeather(response) {
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#cloudiness").innerHTML = response.data.clouds.all;
   document.querySelector(".current-weather").innerHTML =
-    response.data.weather[0].main;
+    response.data.weather[0].description;
   document.querySelector(".high").innerHTML = Math.round(
     response.data.main.temp_max
   );

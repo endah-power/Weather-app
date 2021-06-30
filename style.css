@@ -43,23 +43,6 @@ footer {
     text-align: center;
 }
 
-.unit {
-    text-decoration: none;
-    font-size: 20px;
-    color: #1f6cb0;
-}
-
-.unit:hover {
-    cursor: pointer;
-    font-size: 25px;
-    color: #f76b8a;
-}
-
-.line {
-    font-size: 20px;
-    font-weight: 200;
-}
-
 .frame {
     font-family: "Lekton", sans-serif;
     margin: 50px auto;
@@ -133,6 +116,32 @@ footer {
     background: #ffffff99;
     border-radius: 30px;
     padding: 5px;
+}
+
+.units {
+    font-size: 20px;
+}
+
+#celsius-convert {
+    text-decoration: none;
+    color: #1f6cb0;
+    cursor: default;
+}
+
+#celsius-convert:hover {
+    color: #f76b8a;
+    font-size: 22px;
+}
+
+#fahrenheit-convert {
+    text-decoration: none;
+    color: #1f6cb0;
+    cursor: default;
+}
+
+#fahrenheit-convert:hover {
+    color: #f76b8a;
+    font-size: 22px;
 }
 
 .temperature {
