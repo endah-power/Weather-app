@@ -69,6 +69,8 @@ function displayCurrentWeather(response) {
       `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
       );
   document.querySelector(".current-icon").setAttribute("alt", response.data.weather[0].description);
+
+  celsiusTemperature = response.data.main.temp;
 }
 
 function searchCity(city) {
@@ -85,16 +87,29 @@ function handleSubmit(event) {
 
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
-  alert("Link clicked");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  let temperatureElement = document.querySelector(".current-temp");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
-searchCity("denpasar");
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector(".current-temp");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
 
 let searchForm = document.querySelector(".change-city");
 searchForm.addEventListener("submit", handleSubmit);
 
 let fahrenheitConvert = document.querySelector("#fahrenheit-convert");
 fahrenheitConvert.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusConvert = document.querySelector("#celsius-convert");
+celsiusConvert.addEventListener("click", displayCelsiusTemperature);
+
+searchCity("denpasar");
 
 //Geolocation//
 function showCurrentWeather(response) {
