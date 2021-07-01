@@ -45,26 +45,6 @@ currentDate.innerHTML = `${day}, ${month} ${date} ${year}`;
 let currentTime = document.querySelector(".current-time");
 currentTime.innerHTML = `${hour}:${minute}`;
 
-//Geolocation//
-
-
-function showPosition(position) {
-  let apiKey = "ed5266488adab36bb2cba2d0f886e3cf";
-  let lat = position.coords.latitude;
-  let lon = position.coords.longitude;
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
-  axios.get(apiUrl).then(displayCurrentWeather);
-}
-
-function getCurrentPosition(event) {
-  event.preventDefault();
-  navigator.geolocation.getCurrentPosition(showPosition);
-}
-
-let button = document.querySelector("button");
-button.addEventListener("click", getCurrentPosition);
-
-
 //search bar function//
 function displayCurrentWeather(response) {
   document.querySelector("h1").innerHTML = response.data.name;
@@ -108,6 +88,8 @@ function handleSubmit(event) {
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector(".current-temp");
+  celsiusConvert.classList.remove("active");
+  fahrenheitConvert.classList.add("active");
   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
@@ -115,6 +97,8 @@ function displayFahrenheitTemperature(event) {
 function displayCelsiusTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector(".current-temp");
+  celsiusConvert.classList.add("active");
+  fahrenheitConvert.classList.remove("active");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
@@ -130,4 +114,21 @@ let celsiusConvert = document.querySelector("#celsius-convert");
 celsiusConvert.addEventListener("click", displayCelsiusTemperature);
 
 searchCity("denpasar");
+
+//Geolocation//
+function showPosition(position) {
+  let apiKey = "ed5266488adab36bb2cba2d0f886e3cf";
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+  axios.get(apiUrl).then(displayCurrentWeather);
+}
+
+function getCurrentPosition(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(showPosition);
+}
+
+let button = document.querySelector("button");
+button.addEventListener("click", getCurrentPosition);
 
