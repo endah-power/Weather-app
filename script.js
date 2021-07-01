@@ -46,31 +46,14 @@ let currentTime = document.querySelector(".current-time");
 currentTime.innerHTML = `${hour}:${minute}`;
 
 //Geolocation//
-function showCurrentWeather(response) {
-  let temperature = Math.round(response.data.main.temp);
-  document.querySelector("h1").innerHTML = `${response.data.name}`;
-  document.querySelector(".current-temp").innerHTML = `${temperature}`;
-  document.querySelector("#wind").innerHTML = Math.round(
-    response.data.wind.speed
-  );
-  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-  document.querySelector("#cloudiness").innerHTML = response.data.clouds.all;
-  document.querySelector(".current-weather").innerHTML =
-    response.data.weather[0].description;
-  document.querySelector(".high").innerHTML = Math.round(
-    response.data.main.temp_max
-  );
-  document.querySelector(".low").innerHTML = Math.round(
-    response.data.main.temp_min
-  );
-}
+
 
 function showPosition(position) {
   let apiKey = "ed5266488adab36bb2cba2d0f886e3cf";
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
-  axios.get(apiUrl).then(showCurrentWeather);
+  axios.get(apiUrl).then(displayCurrentWeather);
 }
 
 function getCurrentPosition(event) {
