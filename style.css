@@ -122,27 +122,26 @@ footer {
     font-size: 20px;
 }
 
-#celsius-convert {
-    text-decoration: none;
-    color: #1f6cb0;
+.temp .active {
     cursor: default;
+    color:black;
+    text-decoration: none;
 }
 
-#celsius-convert:hover {
-    color: #f76b8a;
-    font-size: 22px;
+.temp .active:hover {
+    text-decoration: none;
 }
+#celsius-convert {
+    text-decoration: none;   
+}
+
 
 #fahrenheit-convert {
     text-decoration: none;
-    color: #1f6cb0;
-    cursor: default;
+ 
 }
 
-#fahrenheit-convert:hover {
-    color: #f76b8a;
-    font-size: 22px;
-}
+
 
 .temperature {
     font-size: 14px;
